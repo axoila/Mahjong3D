@@ -76,4 +76,4 @@ func update_display():
 	get_node("Control/Panel/HBoxContainer/CurrentPossibilities").set_text(str("| ",pairs.size()/2," possible pairs"))
 	
 	get_node("Control/Panel/HBoxContainer/TilesLeft").set_text(str(brick_dict.size()," bricks left"))
-
+#

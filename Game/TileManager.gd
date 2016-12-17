@@ -4,8 +4,7 @@ var tile_amount = 1
 var textures = []
 
 func setup(tile_directory):
-	pass
-	#textures.append(load("res://Tiles/Tile0000.png"))
+	textures.append(load("res://Tiles/Tile0000.png"))
 	
 #	var dir = Directory.new()
 #	if dir.open(tile_directory) == OK:
@@ -25,5 +24,5 @@ func setup(tile_directory):
 #		print(str(tile_amount, " kinds of tiles"))
 	
 func get(index):
-	return null
-#	return textures[index%tile_amount]
+#	return null
+	return textures[index%tile_amount]
