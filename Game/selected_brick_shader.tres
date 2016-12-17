@@ -1,0 +1,25 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=1]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+
+[sub_resource type="MaterialShader" id=1]
+
+_code = { "fragment":"uniform color DiffuseColor;\nuniform texture Tile;\nuniform float emit;\n\nvec2 miniUV = UV*2 - vec2(0.5, 0.5);\nvec4 texDiffuse = tex(Tile, miniUV);\ntexDiffuse += color(1, 1, 1, 0) * (1 - texDiffuse.a);\nif (miniUV.x <= 0.0 || miniUV.y <= 0.0 || miniUV.x >= 1 || miniUV.y >= 1){\n\tEMISSION = DiffuseColor.rgb * emit;\n\tDIFFUSE = DiffuseColor.rgb;\n} else {\n\tEMISSION = texDiffuse.rgb * DiffuseColor.rgb * emit;\n\tDIFFUSE = texDiffuse.rgb * DiffuseColor.rgb;\n}", "fragment_ofs":0, "light":"", "light_ofs":0, "vertex":"", "vertex_ofs":0 }
+
+[resource]
+
+flags/visible = true
+flags/double_sided = false
+flags/invert_faces = false
+flags/unshaded = true
+flags/on_top = false
+flags/lightmap_on_uv2 = true
+flags/colarray_is_srgb = false
+params/blend_mode = 0
+params/depth_draw = 1
+params/line_width = 1.4013e-45
+shader/shader = SubResource( 1 )
+shader_param/DiffuseColor = Color( 1, 1, 1, 1 )
+shader_param/Tile = ExtResource( 1 )
+shader_param/emit = 0.5
+
