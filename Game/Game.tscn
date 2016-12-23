@@ -99,7 +99,6 @@ environment = SubResource( 1 )
 
 [node name="Lights" type="Spatial" parent="."]
 
-editor/display_folded = true
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.9517, 0 )
 

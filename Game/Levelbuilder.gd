@@ -17,7 +17,7 @@ var __tile_mngr
 
 func make_map(packed_object, layout):
 	__tile_mngr = load("res://TileManager.gd").new()
-	__tile_mngr.tile_amount = 1;
+	__tile_mngr.tile_amount = 5;
 	__tile_mngr.setup("res://Tiles")
 	
 	var levels = layout.split("\n-\n")
